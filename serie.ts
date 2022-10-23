@@ -1,8 +1,8 @@
 export class serie {
 
     public nombre: string;
-    public id: Number;
-    public numTemp: Number;
+    public id: number;
+    public numTemp: number;
     public canal: string;
     public desc: string;
     public link: string;
@@ -10,7 +10,7 @@ export class serie {
 
 
 
-    public constructor(pId: Number, pNombre: string, pCanal: string, pNumTemp: Number, pDesc: string, pLink: string, pImagen: string) {
+    public constructor(pId: number, pNombre: string, pCanal: string, pNumTemp: number, pDesc: string, pLink: string, pImagen: string) {
         this.id = pId;
         this.nombre = pNombre;
         this.numTemp = pNumTemp;
@@ -20,5 +20,31 @@ export class serie {
         this.imagen = pImagen;
     }
 
+    public getId(){
+        return this.id;
+    }
 
+    public getNombre(){
+        return this.nombre;
+    }
+
+    public getNumTemp(){
+        return this.numTemp;
+    }
+
+    public getCanal(){
+        return this.canal;
+    }
+
+    public getDesc(){
+        return this.desc;
+    }
+
+    public getLink(){
+        return this.link;
+    }
+
+    public getImagen(){
+        return this.imagen;
+    }
 }

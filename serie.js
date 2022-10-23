@@ -8,4 +8,25 @@ export class serie {
         this.link = pLink;
         this.imagen = pImagen;
     }
+    getId() {
+        return this.id;
+    }
+    getNombre() {
+        return this.nombre;
+    }
+    getNumTemp() {
+        return this.numTemp;
+    }
+    getCanal() {
+        return this.canal;
+    }
+    getDesc() {
+        return this.desc;
+    }
+    getLink() {
+        return this.link;
+    }
+    getImagen() {
+        return this.imagen;
+    }
 }
