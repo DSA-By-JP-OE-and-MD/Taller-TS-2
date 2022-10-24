@@ -1,22 +1,18 @@
 import { series } from "./data.js";
 let seriesTbody = document.getElementById('TSeries'); // Nodo tbody que tiene el id="courses"
+let CardSerie = document.getElementById("Event");
 renderSeriesInTable(series);
 calcularPromedioTemp(series);
-
 function renderSeriesInTable(series) {
     series.forEach(s => {
         let trElement = document.createElement("tr");
-        trElement.innerHTML = `<td> <img src="${s.getImagen()}"></td>
-                            <td>${s.getId()}</td>
+        trElement.innerHTML = `<td>${s.getId()}</td>
                             <td>${s.getNombre()}</td>
-                            <td>${s.getCanal()}</td>
-                            <td>${s.getDesc()}</td>
-                            <td>${s.getNumTemp()}</td>
-                            <td>${s.getLink()}</td>`;
+                            <td>${s.getCanal()}</td>`;
+        trElement.addEventListener("click", function () { CardSerie.innerHTML = `<img class="img-fluid" src=${s.getImagen()}"><h1 class="card-title">${s.getNombre()}</h1><p class="card-text">${s.getDesc()}</p> <p>Numero de temporadas: ${s.getNumTemp()}</p><a href=${s.getLink()} class="card-link">${s.getLink()}</a>`; });
         seriesTbody.appendChild(trElement);
     });
 }
-
 function calcularPromedioTemp(series) {
     let prom = 0;
     let cont = 0;
